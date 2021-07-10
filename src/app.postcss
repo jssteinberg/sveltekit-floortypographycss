@@ -1,0 +1,197 @@
+@import 'floor-typography-css/src/reset.css'; /* Core */
+@import 'floor-typography-css/src/normalize-style.css'; /* Core */
+@import 'floor-typography-css/src/vars.css'; /* Core */
+@import 'floor-typography-css/src/headings-font.css';
+
+/* ROOT VARIABLES */
+
+:root {
+	--space: calc(1rem * (1 + var(--added-lead))); /* Adjusts vertical rhythm */
+	--border-radius: calc(.125 * var(--space, 1rem));
+	--h1-added-lead: .15; /* Adjusts h1's line-height, thus its font-size */
+
+	/* Font-families */
+	--system-font: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+	--mono-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace; /* Mono elements' fonts are set to --mono-font */
+
+	/* Colors */
+	--bg-h: 0;
+	--bg-l: 100%;
+	--fg-h: 0;
+	--fg-s: 0%;
+	--fg-l: 0%;
+	--gray: hsla(var(--bg-h),0%,40%,80%);
+	--code-bg: hsla(var(--bg-h),0%,50%,25%);
+}
+
+@media (prefers-color-scheme: dark) {
+	/* Dark var changes */
+	:root {
+		--bg-l: 7.5%;
+		--fg-s: 10%;
+		--fg-l: 80%;
+	}
+}
+
+/* STYLING */
+
+:root {
+	font-family: var(--system-font);
+	font-size: 1.1rem;
+
+	background: hsl(var(--bg-h),0%,var(--bg-l));
+	color: hsl(var(--fg-h),var(--fg-s),var(--fg-l));
+}
+
+body {
+	margin: 0 auto; /* Change browser default body margin */
+	padding: 0 1rem;
+	max-width: 50em; /* Set site width */
+}
+
+main {
+	--h1-min-font-size: 2em; /* Bigger h1 within <main> */
+}
+
+h1 {
+	hyphens: manual; /* By default hyphens is set to auto, but h1 should be manual. */
+}
+
+/* Headings' margins */
+
+h1, .text-h1 {
+	margin-block-start: calc(var(--space, 1rem) * 1);
+	margin-block-end: calc(var(--space, 1rem) * 1);
+}
+
+h2, .text-h2 {
+	margin-block-start: calc(var(--space, 1rem) * 1.5);
+	margin-block-end: calc(var(--space, 1rem) * .5);
+}
+
+h3, .text-h3,
+h4, .text-h4,
+h5, .text-h5,
+h6, .text-h6 {
+	margin-block-end: 0;
+}
+
+h2 + *, .text-h2 + *,
+h3 + *, .text-h3 + *,
+h4 + *, .text-h4 + *,
+h5 + *, .text-h5 + *,
+h6 + *, .text-h6 + * {
+	margin-block-start: 0;
+}
+
+/* <em> inside some headings is only normal font-weight */
+h1:not([class*="text-h"]) em, h2:not([class*="text-h"]) em, h3:not([class*="text-h"]) em,
+.text-h1 em, .text-h2 em, .text-h3 em {
+	font-style: normal;
+	font-weight: normal;
+}
+
+/* Links */
+
+@media (prefers-color-scheme: dark) {
+	a { color: inherit; }
+	a:visited { color: hsl(var(--fg-h),0%,calc(var(--fg-l) - 25%)); }
+}
+
+/* Lists */
+
+ol, ul { padding-inline-start: 2em; }
+
+/* Code blocks */
+
+code { font-size: .95em; }
+pre code { font-size: .875em; }
+
+pre {
+	overflow: auto;
+	padding: var(--space, 1rem) var(--space, 1em);
+	border-radius: var(--border-radius);
+	background: var(--code-bg);
+}
+
+/* .button CLASS */
+
+.button {
+	text-decoration: none; /* reset link underline */
+	/* TODO: reset <button> */
+
+	display: inline-block;
+	font-weight: bold; font-weight: 600;
+	padding: calc(var(--space, 1rem) * .45) var(--space, 1em);
+	background: var(--code-bg);
+	border-bottom: calc(var(--space, 1rem) * .1) solid var(--gray);
+	border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.button:hover,
+.button:focus {
+	border-color: currentColor;
+}
+
+/* .prose CLASS */
+
+/* Lists */
+
+.prose ol,
+.prose ul {
+	--indent: var(--space, 2em);
+	list-style: none;
+	padding-inline-start: var(--indent);
+}
+
+.prose ol {
+	counter-reset: ol-counter;
+}
+
+.prose li {
+	position: relative;
+	text-indent: calc(var(--indent) * -.5);
+}
+
+.prose li::before {
+	display: inline-block;
+	min-width: calc(var(--indent) * .5);
+}
+
+.prose ol > li::before {
+	counter-increment: ol-counter;
+	content: counter(ol-counter) ".\0000a0"; /* \0000a0 is space */
+}
+
+.prose ul > li::before {
+	content: "";
+}
+
+/* Bullet */
+.prose ul > li::after {
+	--s: .5ch; /* size */
+	content: "";
+	display: block;
+	position: absolute;
+	top: calc(var(--added-lead) * .65em + var(--s)); left: calc(var(--indent) * -.4 - var(--s));
+	z-index: 1;
+	width: var(--s); height: var(--s);
+	background: currentColor;
+	border-radius: var(--s);
+}
+
+/* Fix first-child new line */
+.prose li > :first-child {
+	display: inline-block;
+}
+
+/* Fix text-indent side effect on child elements. */
+.prose li :not(li) {
+	text-indent: 0;
+}
+
+/* Fix first-child block elements */
+.prose li > :first-child:not(ol):not(ul),
+.prose li > * > :first-child:not(ol):not(ul):not(li) {
+	display: inline;
+}
