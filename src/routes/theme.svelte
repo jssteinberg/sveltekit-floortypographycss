@@ -1,5 +1,5 @@
 <p>
-For a simple Floor Typography CSS Theme example, <a href="https://github.com/jssteinberg/sveltekit-floortypographycss/blob/main/src/app.postcss">see the stylesheet for this site at Github</a>. The styling in summary:
+For a simple theme <a href="https://github.com/jssteinberg/sveltekit-floortypographycss/blob/main/src/app.postcss">see the stylesheet for this site at Github</a>. The styling in summary:
 </p>
 
 <ol>
