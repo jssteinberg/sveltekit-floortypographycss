@@ -105,8 +105,11 @@ ol, ul { padding-inline-start: 2em; }
 /* Blockquote */
 
 blockquote {
-	margin-inline-start: var(--space, 1em);
-	margin-inline-end: var(--space, 1em);
+	--bw: calc(var(--space, 1rem) * .1);
+	margin-inline-start: 0;
+	margin-inline-end: 0;
+	padding-inline-start: calc(var(--space, 1em) - var(--bw));
+	border-left: var(--bw) solid var(--gray);
 }
 
 /* Code blocks */
