@@ -109,7 +109,7 @@ pre code { font-size: .875em; }
 
 pre {
 	overflow: auto;
-	padding: var(--space, 1rem) var(--space, 1em);
+	padding: var(--space, 1rem) calc(.5 * var(--space, 1em));
 	border-radius: var(--border-radius);
 	background: var(--code-bg);
 }
@@ -139,7 +139,7 @@ pre {
 
 .prose ol,
 .prose ul {
-	--indent: var(--space, 2em);
+	--indent: calc(1 * var(--space, 2em));
 	list-style: none;
 	padding-inline-start: var(--indent);
 }
@@ -169,15 +169,20 @@ pre {
 
 /* Bullet */
 .prose ul > li::after {
-	--s: .5ch; /* size */
-	content: "";
-	display: block;
-	position: absolute;
-	top: calc(var(--added-lead) * .625em + var(--s)); left: calc(var(--indent) * -.4 - var(--s));
-	z-index: 1;
+	/* Size */
+	--s: 6px;
 	width: var(--s); height: var(--s);
+
+	display: block;
+
+	position: absolute;
+	top: calc((1 + var(--added-lead)) * .5375em - var(--s) / 2); left: calc(var(--indent) * -.8);
+	z-index: 1;
+
 	background: currentColor;
-	border-radius: var(--s);
+	border-radius: calc(.5 * var(--s));
+
+	content: "";
 }
 
 /* Fix first-child new line */
