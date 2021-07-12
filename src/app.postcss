@@ -133,6 +133,11 @@ pre {
 	border-color: currentColor;
 }
 
+@media (prefers-color-scheme: dark) {
+	/* No anchor button visited style for dark mode while visited is gray (button looks diabled) */
+	a.button:visited { color: inherit; }
+}
+
 /* .prose CLASS */
 
 /* Lists */
