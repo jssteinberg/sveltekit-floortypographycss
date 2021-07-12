@@ -1,6 +1,21 @@
+<script context="module">
+	import { dev } from '$app/env';
+	export const hydrate = dev;
+</script>
+
+<ol>
+<li>
+<h2>Sveltekit</h2>
+
+<p>
+First, initiate a new <a href="https://kit.svelte.dev">Sveltekit</a> project.
+</p>
+</li>
+
+<li>
 <h2>svelte-add</h2>
 <p>
-Let's add Postcss and Floor typography CSS (and the latter requires postcss-import):
+Second, add Postcss and Floor typography CSS (the latter requires postcss-import):
 </p>
 
 <pre><code>
@@ -9,10 +24,12 @@ npm i -D floor-typography-css@next postcss-import
 </code></pre>
 
 <p>Add what else you want from <a href="https://github.com/svelte-add/svelte-add">svelte-add</a>.</p>
+</li>
 
+<li>
 <h2>src/app.postcss</h2>
 
-<p>Setup Floor Typography CSS in src/app.postcss—your global (Postcss) stylesheet:</p>
+<p>Third, setup Floor Typography CSS in src/app.postcss—your global (Postcss) stylesheet:</p>
 
 <pre><code>
 {`@import 'floor-typography-css/src/reset.css'; /* Core */
@@ -34,24 +51,27 @@ main {
 <p>
 <strong><code>--space</code>.</strong>
 
-A feature of Floor Typography CSS is to use the <code>--space</code> variable. It will adjust vertical spacing between elements—particullary noticeable on headings when the "headings-margin" file is imported. Here we are setting it to one 'root' line-height, or leading as it is called in typography.
+A feature of Floor Typography CSS is to use the <code>--space</code> variable. It will adjust vertical spacing between elements—particullary noticeable on headings when the "headings-margin" file is imported. Here we are setting it to one 'root' line-height, or <em>leading</em> as it's called in typography.
 
 </p>
 
 <p>
-	<strong>
-	<code>--h1-added-lead</code>.
-	</strong>
-	Floor Typography CSS provides two ways to adjust headings' font sizes. The first is adjusting a heading's line-height by changing <code>--h[#]added-lead</code>.
+<strong>
+<code>--h1-added-lead</code>.
+</strong>
+Floor Typography CSS provides two ways to adjust headings' font sizes. The first is adjusting a heading's line-height by changing <code>--h[#]added-lead</code>.
 </p>
 
 <p>
-	<strong>
-	<code>--h1-min-font-size</code>.
-	</strong>
-	The second is adjusting a heading's minimum font-size by changing <code>--h[#]-min-font-size</code> to a natural number (N)—no decimals. <em>You can only adjust the minimum font-size because the true size is calculated from a heading's maximum font-size (root line-height * N) divided by its line-height (another reason to use Floor Typography CSS).</em>
+<strong>
+<code>--h1-min-font-size</code>.
+</strong>
+The second is adjusting a heading's minimum font-size by changing <code>--h[#]-min-font-size</code> to a natural number (N)—no decimals. <em>You can only adjust the minimum font-size because the true size is calculated from a heading's maximum font-size (root line-height * N) divided by its line-height (another reason to use Floor Typography CSS).</em>
 </p>
+</li>
+</ol>
 
+<!--
 <aside>
 <section>
 <h3 class="text-h1">Illustration of all line-heights adding up to leading * N</h3>
@@ -72,6 +92,7 @@ This is text-book typography for vertical rythm.
 </p>
 </section>
 </aside>
+-->
 
 <style>
 	aside {

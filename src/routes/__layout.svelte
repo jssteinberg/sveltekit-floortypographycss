@@ -5,13 +5,14 @@
 	const menu = [
 		{ href: '/', label: 'Intro', subtitle: 'Sveltekit & Floor Typography CSS' },
 		{ href: '/setup', label: 'Setup' },
-		{ href: '/theme', label: 'Example' },
+		{ href: '/theme', label: 'Theme' },
 		{ href: '/more', label: 'More' },
 	]
 		.map((item, index) => {
 			// Add index to menu items
 			return { ...item, index };
 		});
+
 	$: current = menu.filter((x) => {
 		return x.href === $page.path;
 	})[0];
@@ -44,38 +45,21 @@
 
 	<slot></slot>
 
-	{#if menu[current.index + 1]}
+	{#if current && menu[current.index + 1]}
 		<p>
 		<a class="button" href="{menu[current.index + 1].href}">Next: {menu[current.index + 1].label} &rarr;</a>
 		</p>
 	{/if}
-	
-	<footer>
-		<h2 class="text-h4"><em>Resources</em></h2>
-		<ul>
-		<li>
-		<a href="https://github.com/svelte-add/postcss">svelte-add/postcss at Github</a>
-		</li>
-		<li>
-		<a href="https://floortypography.vercel.app">Floor typography CSS</a>
-		</li>
-		<li>
-		<a href="https://github.com/postcss/postcss-import">postcss-import at Github</a>
-		</li>
-		<li>
-		<a href="https://kit.svelte.dev/docs">Sveltekit docs</a>
-		</li>
-		</ul>
-	</footer>
 </main>
 
 <style>
-	header {
-		border-top: var(--border-width, .125rem) solid;
+	header * {
+		margin: 0;
 	}
 
-	.site-title {
-		margin: calc(.5 * var(--space, 1rem)) 0;
+	header a {
+		display: inline-block;
+		padding: calc(.25 * var(--space, 1rem)) 0;
 	}
 
 	.site-title a {
@@ -87,11 +71,5 @@
 		display: flex;
 		flex-wrap: wrap;
 		gap: 1rem;
-	}
-
-	footer {
-		margin: calc(2 * var(--space, 1rem)) 0;
-		padding: calc(1 * var(--space, 1rem)) 0;
-		border-top: var(--border-width, 1px) solid var(--border-color, currentColor);
 	}
 </style>

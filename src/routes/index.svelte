@@ -1,7 +1,8 @@
-<p>
-<strong>First,</strong> initiate a new <a href="https://kit.svelte.dev">Sveltekit</a> project.
-</p>
+<script context="module">
+	import { dev } from '$app/env';
+	export const hydrate = dev;
+</script>
 
 <p>
-<strong>Second,</strong> we will use Floor Typography CSS, a postcss library which makes custom text-book typographic CSS easy, and it has updated normalization across browsers.
+A guide to setup <a href="//kit.svelte.dev">Sveltekit</a> and <a href="//floortypography.vercel.app">Floor Typography CSS</a>, a postcss library which makes custom text-book typographic CSS easy, and it has updated normalization across browsers.
 </p>
