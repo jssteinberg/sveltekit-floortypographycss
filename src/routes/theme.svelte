@@ -30,7 +30,7 @@ For a simple theme <a href="https://github.com/jssteinberg/sveltekit-floortypogr
 				<code>pre</code>, which also gets a simple background and internal overflow
 			</li>
 			<li>
-				<code>blockquote</code> (WIP)
+				<code>blockquote</code>
 			</li>
 		</ul>
 	</li>
@@ -41,3 +41,14 @@ For a simple theme <a href="https://github.com/jssteinberg/sveltekit-floortypogr
 		<code>body</code> gets a simple style for page layout and width (this must most likely be changed when a site gets more realized).
 	</li>
 </ul>
+
+<h2><code>blockquote</code></h2>
+
+<blockquote>
+Family owned, operated & argued over
+</blockquote>
+
+<p>
+—Sierra Nevada Brewing Co.
+</p>
+
