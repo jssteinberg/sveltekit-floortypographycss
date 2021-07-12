@@ -2,8 +2,11 @@
 	import { page } from '$app/stores';
 	import '../app.postcss';
 
+	const title = 'Sveltekit & Floor Typography CSS';
+	const description = 'A guide to setup Sveltekit and Floor Typography CSS—a postcss library which makes custom text-book typographic CSS easy, and it has updated normalization across browsers.';
+
 	const menu = [
-		{ href: '/', label: 'Intro', subtitle: 'Sveltekit & Floor Typography CSS' },
+		{ href: '/', label: 'Intro', subtitle: title},
 		{ href: '/setup', label: 'Setup' },
 		{ href: '/theme', label: 'Theme' },
 		{ href: '/more', label: 'More' },
@@ -18,12 +21,51 @@
 	})[0];
 </script>
 
+<svelte:head>
+	{#if title}
+		<title>{title}</title>
+		<meta itemprop=name content="{title}">
+		<meta property="twitter:title" content="{title}">
+		<meta property="og:title" content="{title}">
+	{/if}
+
+	{#if description}
+		<meta name=description content="{description}">
+		<meta itemprop=description content="{description}">
+		<meta property="twitter:description" content="{description}">
+		<meta property="og:description" content="{description}">
+	{/if}
+
+	{#if canonical}
+		<meta name=url content="{canonical}">
+		<link rel=canonical href="{canonical}" />
+	{/if}
+
+	{#if author}
+		<meta name=author content="{author}">
+	{/if}
+
+	{#if image}
+		<meta itemprop=image content="{image}">
+		<link rel=image_src href="{image}">
+		<meta property="twitter:image" content="{image}">
+		<meta property="og:image" content="{image}">
+	{:else}
+		<meta itemprop=image content="https://johan.land/media/post-u-photo.jpg">
+		<link rel=image_src href="https://johan.land/media/post-u-photo.jpg">
+		<meta property="twitter:image" content="https://johan.land/media/post-u-photo.jpg">
+		<meta property="og:image" content="https://johan.land/media/post-u-photo.jpg">
+	{/if}
+
+	{#if keywords}
+		<meta name=keywords content="{keywords}">
+	{/if}
+</svelte:head>
+
 <header>
 	<p class="site-title text-h1">
 		<em>
-		<a href="/">
-		Sveltekit & Floor Typography CSS
-		</a>
+		<a href="/">{title}</a>
 		</em>
 	</p>
 
