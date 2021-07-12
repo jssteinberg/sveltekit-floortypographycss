@@ -22,30 +22,30 @@
 </script>
 
 <svelte:head>
-	{#if title}
+	{#if typeof title === 'undefined'}
 		<title>{title}</title>
 		<meta itemprop=name content="{title}">
 		<meta property="twitter:title" content="{title}">
 		<meta property="og:title" content="{title}">
 	{/if}
 
-	{#if description}
+	{#if typeof description === 'undefined'}
 		<meta name=description content="{description}">
 		<meta itemprop=description content="{description}">
 		<meta property="twitter:description" content="{description}">
 		<meta property="og:description" content="{description}">
 	{/if}
 
-	{#if canonical}
+	{#if typeof canonical === 'undefined'}
 		<meta name=url content="{canonical}">
 		<link rel=canonical href="{canonical}" />
 	{/if}
 
-	{#if author}
+	{#if typeof author === 'undefined'}
 		<meta name=author content="{author}">
 	{/if}
 
-	{#if image}
+	{#if typeof image === 'undefined'}
 		<meta itemprop=image content="{image}">
 		<link rel=image_src href="{image}">
 		<meta property="twitter:image" content="{image}">
@@ -57,7 +57,7 @@
 		<meta property="og:image" content="https://johan.land/media/post-u-photo.jpg">
 	{/if}
 
-	{#if keywords}
+	{#if typeof keywords === 'undefined'}
 		<meta name=keywords content="{keywords}">
 	{/if}
 </svelte:head>
