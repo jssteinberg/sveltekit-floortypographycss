@@ -39,7 +39,7 @@ npm i -D floor-typography-css@next postcss-import
 @import 'floor-typography-css/src/headings-margin.css'; /* Or headings-margin-lg */
 
 :root {
-	--space: calc(1rem * (1 + var(--added-lead))); /* 1 root line-height—vertical rhythm. */
+	--space: calc(1rem * (1 + var(--added-lead))); /* 1 root line-height---vertical rhythm. */
 	--h1-added-lead: .15; /* Adjusts h1's line-height, thus its font-size */
 }
 
