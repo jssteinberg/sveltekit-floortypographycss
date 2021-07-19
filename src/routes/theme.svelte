@@ -42,6 +42,34 @@ For a simple theme <a href="https://github.com/jssteinberg/sveltekit-floortypogr
 	</li>
 </ul>
 
+<h2>Headings</h2>
+
+<p class="text-h1">Heading One (h1)</p>
+
+<p>
+There should only be one <code>&lt;h1&gt;</code> per HTML document. This is good for SEO.
+</p>
+
+<p class="text-h2">Heading Two (h2)</p>
+
+<p>A following paragraph to give a more realistic look.</p>
+
+<p class="text-h3">Heading Three (h3)</p>
+
+<p>A following paragraph to give a more realistic look.</p>
+
+<p class="text-h4">Heading Four (h4)</p>
+
+<p>A following paragraph to give a more realistic look.</p>
+
+<p class="text-h5">Heading Five (h5)</p>
+
+<p><code>&lt;h5&gt;</code> should rarely be used. Many say avoided actually.</p>
+
+<p class="text-h6">Sixth Heading (h6)</p>
+
+<p><code>&lt;h6&gt;</code> should very rarely be used. Perhaps "Never!" one should say.</p>
+
 <h2><code>blockquote</code></h2>
 
 <blockquote>
