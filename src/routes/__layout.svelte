@@ -22,42 +22,37 @@
 </script>
 
 <svelte:head>
-	{#if typeof title !== 'undefined'}
+	{#if typeof title === 'string'}
 		<title>{title}</title>
 		<meta itemprop=name content="{title}">
 		<meta property="twitter:title" content="{title}">
 		<meta property="og:title" content="{title}">
 	{/if}
 
-	{#if typeof description !== 'undefined'}
+	{#if typeof description === 'string'}
 		<meta name=description content="{description}">
 		<meta itemprop=description content="{description}">
 		<meta property="twitter:description" content="{description}">
 		<meta property="og:description" content="{description}">
 	{/if}
 
-	{#if typeof canonical !== 'undefined'}
+	{#if typeof canonical === 'string'}
 		<meta name=url content="{canonical}">
 		<link rel=canonical href="{canonical}" />
 	{/if}
 
-	{#if typeof author !== 'undefined'}
+	{#if typeof author === 'string'}
 		<meta name=author content="{author}">
 	{/if}
 
-	{#if typeof image !== 'undefined'}
+	{#if typeof image === 'string'}
 		<meta itemprop=image content="{image}">
 		<link rel=image_src href="{image}">
 		<meta property="twitter:image" content="{image}">
 		<meta property="og:image" content="{image}">
-	{:else}
-		<meta itemprop=image content="https://johan.land/media/post-u-photo.jpg">
-		<link rel=image_src href="https://johan.land/media/post-u-photo.jpg">
-		<meta property="twitter:image" content="https://johan.land/media/post-u-photo.jpg">
-		<meta property="og:image" content="https://johan.land/media/post-u-photo.jpg">
 	{/if}
 
-	{#if typeof keywords !== 'undefined'}
+	{#if typeof keywords === 'string'}
 		<meta name=keywords content="{keywords}">
 	{/if}
 </svelte:head>
