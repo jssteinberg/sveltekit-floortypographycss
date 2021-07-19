@@ -95,6 +95,13 @@
 </main>
 
 <style>
+	/* <em> inside some headings is only normal font-weight */
+	h1:not([class*="text-h"]) em, h2:not([class*="text-h"]) em, h3:not([class*="text-h"]) em,
+	.text-h1 em, .text-h2 em, .text-h3 em {
+		font-style: normal;
+		font-weight: normal;
+	}
+
 	header * {
 		margin: 0;
 	}
