@@ -44,7 +44,7 @@ npm i -D floor-typography-css@next postcss-import
 }
 
 main {
-	--h1-min-font-size: 2em; /* Bigger h1 within <main> */
+	--h1-min-font-size: 2em; /* Bigger h1. Var should be a natural number. */
 }`}
 </code></pre>
 
