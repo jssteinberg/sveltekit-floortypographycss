@@ -6,7 +6,8 @@
 
 :root {
 	--added-lead: .6;
-	--space: calc(1rem * (1 + var(--added-lead))); /* Adjusts vertical rhythm */
+	--rlh: calc(1rem * (1 + var(--added-lead))); /* Root line-height */
+	--space: var(--rlh); /* Adjusts vertical rhythm */
 	--border-radius: calc(.125 * var(--space, 1rem));
 
 	/* Headings */
@@ -92,7 +93,7 @@ h6 + *, .text-h6 + * {
 
 /* Lists */
 
-ol, ul { padding-inline-start: 2em; }
+ol, ul { padding-inline-start: max(var(--space, 1rem), var(--rlh, 2em)); }
 
 /* Blockquote */
 
