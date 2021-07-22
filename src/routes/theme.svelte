@@ -77,6 +77,6 @@ Family owned, operated & argued over
 </blockquote>
 
 <p>
-—Sierra Nevada Brewing Co.
+<em>—Sierra Nevada Brewing Co.</em>
 </p>
 
