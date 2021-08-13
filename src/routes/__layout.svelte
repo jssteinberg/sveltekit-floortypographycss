@@ -35,26 +35,6 @@
 		<meta property="twitter:description" content="{description}">
 		<meta property="og:description" content="{description}">
 	{/if}
-
-	{#if typeof canonical === 'string'}
-		<meta name=url content="{canonical}">
-		<link rel=canonical href="{canonical}" />
-	{/if}
-
-	{#if typeof author === 'string'}
-		<meta name=author content="{author}">
-	{/if}
-
-	{#if typeof image === 'string'}
-		<meta itemprop=image content="{image}">
-		<link rel=image_src href="{image}">
-		<meta property="twitter:image" content="{image}">
-		<meta property="og:image" content="{image}">
-	{/if}
-
-	{#if typeof keywords === 'string'}
-		<meta name=keywords content="{keywords}">
-	{/if}
 </svelte:head>
 
 <header>
@@ -91,8 +71,7 @@
 
 <style>
 	/* <em> inside some headings is only normal font-weight */
-	h1:not([class*="text-h"]) em, h2:not([class*="text-h"]) em, h3:not([class*="text-h"]) em,
-	.text-h1 em, .text-h2 em, .text-h3 em {
+	h1 em, .text-h1 em {
 		font-style: normal;
 		font-weight: normal;
 	}

@@ -95,9 +95,9 @@ This is text-book typography for vertical rythm.
 -->
 
 <style>
-	aside {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: var(--space, 1rem);
-	}
+	/* aside { */
+	/* 	display: grid; */
+	/* 	grid-template-columns: 1fr 1fr; */
+	/* 	gap: var(--space, 1rem); */
+	/* } */
 </style>
