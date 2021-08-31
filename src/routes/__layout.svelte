@@ -40,13 +40,13 @@
 <header>
 	<p class="site-title text-h1">
 		<em>
-		<a href="/">{title}</a>
+		<a sveltekit:prefetch href="/">{title}</a>
 		</em>
 	</p>
 
 	<nav>
 		{#each menu as item}
-			<a href="{item.href}">{item.label}</a>
+			<a sveltekit:prefetch href="{item.href}">{item.label}</a>
 		{/each}
 	</nav>
 </header>
@@ -64,7 +64,7 @@
 
 	{#if current && menu[current.index + 1]}
 		<p>
-		<a class="button" href="{menu[current.index + 1].href}">Next: {menu[current.index + 1].label} &rarr;</a>
+		<a sveltekit:prefetch class="button" href="{menu[current.index + 1].href}">Next: {menu[current.index + 1].label} &rarr;</a>
 		</p>
 	{/if}
 </main>
