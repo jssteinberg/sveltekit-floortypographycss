@@ -9,7 +9,7 @@
 <h2>Prefetch routes on hover/touch</h2>
 
 <p>
-	Even thought not stated in <a href="https://kit.svelte.dev/docs#anchor-options-sveltekit-prefetch">the docs</a> (at the time of writing this), `sveltekit:prefetch` will prefetch a route when the user hovers or touches a link even though there is no load function.
+	Even thought not stated in <a href="https://kit.svelte.dev/docs#anchor-options-sveltekit-prefetch">the docs</a> (at the time of writing this), <code>sveltekit:prefetch</code> will prefetch a route when the user hovers or touches a link even though there is no <code>load</code> function.
 </p>
 
 <h2>No/less JS</h2>
