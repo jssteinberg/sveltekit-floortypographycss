@@ -18,8 +18,10 @@ First, initiate a new <a href="https://kit.svelte.dev">Sveltekit</a> project.
 Second, add Postcss and Floor typography CSS (the latter requires postcss-import):
 </p>
 
+<p><em>Reference <a href="https://github.com/svelte-add/postcss">github.com/svelte-add/postcss</a>.</em></p>
+
 <pre><code>
-npx svelte-add postcss
+npx svelte-add@latest postcss
 npm i -D floor-typography-css@next postcss-import
 </code></pre>
 
