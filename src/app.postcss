@@ -57,28 +57,28 @@ body {
 /* Headings */
 main { --h1-min-font-size: 2em; /* Bigger h1. Var should be a natural number. */ }
 h1 { hyphens: manual; /* By default hyphens is set to auto, but h1 should be manual. */ }
-h5, .text-h5 { font-weight: bold; }
-h6, .text-h6 { font-style: italic; }
+h5, .h5 { font-weight: bold; }
+h6, .h6 { font-style: italic; }
 
 /* Headings' margins */
-h1, .text-h1,
-h2, .text-h2 {
+h1, .h1,
+h2, .h2 {
 	margin-block-start: calc(var(--space, 1rem) * 1);
 	margin-block-end: calc(var(--space, 1rem) * 1);
 }
-h3, .text-h3,
-h4, .text-h4 {
+h3, .h3,
+h4, .h4 {
 	margin-block-start: calc(var(--space, 1rem) * 1.5);
 	margin-block-end: calc(var(--space, 1rem) * .5);
 }
-h5, .text-h5,
-h6, .text-h6 {
+h5, .h5,
+h6, .h6 {
 	margin-block-end: 0;
 }
-h3 + *, .text-h3 + *,
-h4 + *, .text-h4 + *,
-h5 + *, .text-h5 + *,
-h6 + *, .text-h6 + * {
+h3 + *, .h3 + *,
+h4 + *, .h4 + *,
+h5 + *, .h5 + *,
+h6 + *, .h6 + * {
 	/* Remove top margin on next el */
 	margin-block-start: 0;
 }
@@ -213,12 +213,12 @@ pre code { font-size: .875em; }
 }
 
 /* Fix list items with headings */
-.prose li h1 + *, .prose li .text-h1 + *,
-.prose li h2 + *, .prose li .text-h2 + *,
-.prose li h3 + *, .prose li .text-h3 + *,
-.prose li h4 + *, .prose li .text-h4 + *,
-.prose li h5 + *, .prose li .text-h5 + *,
-.prose li h6 + *, .prose li .text-h6 + * {
+.prose li h1 + *, .prose li .h1 + *,
+.prose li h2 + *, .prose li .h2 + *,
+.prose li h3 + *, .prose li .h3 + *,
+.prose li h4 + *, .prose li .h4 + *,
+.prose li h5 + *, .prose li .h5 + *,
+.prose li h6 + *, .prose li .h6 + * {
 	/* Remove top margin on next el */
 	margin-block-start: 0;
 }

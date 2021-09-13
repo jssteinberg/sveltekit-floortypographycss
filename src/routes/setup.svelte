@@ -76,7 +76,7 @@ The second is adjusting a heading's minimum font-size by changing <code>--h[#]-m
 <!--
 <aside>
 <section>
-<h3 class="text-h1">Illustration of all line-heights adding up to leading * N</h3>
+<h3 class="h1">Illustration of all line-heights adding up to leading * N</h3>
 
 <p>
 Notice how the lines in paragraphs between the two columns line up.
@@ -87,7 +87,7 @@ Since <code>--space</code> equals root line-height and Floor Typography CSS calc
 </section>
 
 <section>
-<h3 class="text-h1">Vertical rythm</h3>
+<h3 class="h1">Vertical rythm</h3>
 
 <p>
 This is text-book typography for vertical rythm.
