@@ -1,8 +1,3 @@
-<script context="module">
-	import { dev } from '$app/env';
-	export const hydrate = dev;
-</script>
-
 <h2>Deploy</h2>
 <p>To deploy, install the relevant <a href="https://kit.svelte.dev/docs#adapters">adapter</a>.</p>
 

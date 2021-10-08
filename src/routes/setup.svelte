@@ -41,7 +41,7 @@ npm i -D floor-typography-css@next postcss-import
 @import 'floor-typography-css/src/headings-margin.css'; /* Or headings-margin-lg */
 
 :root {
-	--space: calc(1rem * (1 + var(--added-lead))); /* 1 root line-height---vertical rhythm. */
+	--spacer: calc(1rem * (1 + var(--added-lead))); /* 1 root line-height---vertical rhythm. */
 	--h1-added-lead: .15; /* Adjusts h1's line-height, thus its font-size */
 }
 
@@ -51,9 +51,9 @@ main {
 </code></pre>
 
 <p>
-<strong><code>--space</code>.</strong>
+<strong><code>--spacer</code>.</strong>
 
-A feature of Floor Typography CSS is to use the <code>--space</code> variable. It will adjust vertical spacing between elements—particullary noticeable on headings when the "headings-margin" file is imported. Here we are setting it to one 'root' line-height, or <em>leading</em> as it's called in typography.
+A feature of Floor Typography CSS is to use the <code>--spacer</code> variable. It will adjust vertical spacing between elements—particullary noticeable on headings when the "headings-margin" file is imported. Here we are setting it to one 'root' line-height, or <em>leading</em> as it's called in typography.
 
 </p>
 
@@ -82,7 +82,7 @@ The second is adjusting a heading's minimum font-size by changing <code>--h[#]-m
 Notice how the lines in paragraphs between the two columns line up.
 </p>
 <p>
-Since <code>--space</code> equals root line-height and Floor Typography CSS calculates headings' font-size plus dynamic line-height to equal root line-height * N, lines will line up like this.
+Since <code>--spacer</code> equals root line-height and Floor Typography CSS calculates headings' font-size plus dynamic line-height to equal root line-height * N, lines will line up like this.
 </p>
 </section>
 
@@ -100,6 +100,6 @@ This is text-book typography for vertical rythm.
 	/* aside { */
 	/* 	display: grid; */
 	/* 	grid-template-columns: 1fr 1fr; */
-	/* 	gap: var(--space, 1rem); */
+	/* 	gap: var(--spacer, 1rem); */
 	/* } */
 </style>

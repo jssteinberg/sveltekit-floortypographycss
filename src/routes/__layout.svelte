@@ -82,7 +82,7 @@
 
 	header a {
 		display: inline-block;
-		padding: calc(.25 * var(--space, 1rem)) 0;
+		padding: calc(.25 * var(--spacer, 1rem)) 0;
 	}
 
 	.site-title a {
