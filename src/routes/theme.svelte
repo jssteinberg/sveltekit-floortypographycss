@@ -21,7 +21,7 @@ For a simple theme <a href="https://github.com/jssteinberg/sveltekit-floortypogr
 	</li>
 
 	<li>
-		<code>.prose</code> class where all relevant elements gets an inline-start margin/padding based on the same size of a root line-height, including:
+		“<code>prose</code>” class where all relevant elements gets an inline-start margin/padding based on the same size of a root line-height, including:
 		<ul>
 			<li>
 				<code>ol</code>, <code>ul</code>, and they are more universal
