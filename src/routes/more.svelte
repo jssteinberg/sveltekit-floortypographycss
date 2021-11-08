@@ -1,3 +1,12 @@
+<script context="module">
+	import { dev } from '$app/env';
+	export const hydrate = dev;
+</script>
+
+<script>
+	const code = '<script context="module">\n\timport { dev } from \'$app/env\';\n\texport const hydrate = dev;\n\texport const router = dev;\n<\/script>';
+</script>
+
 <h2>Deploy</h2>
 <p>To deploy, install the relevant <a href="https://kit.svelte.dev/docs#adapters">adapter</a>.</p>
 
@@ -13,10 +22,4 @@
 For no/less Javascript on page level, export router and/or hydrate as false (but <code>true</code> when <code>dev</code> since it disables HRM). See <a href="https://kit.svelte.dev/docs#ssr-and-javascript">SSR and Javascript in Sveltekit docs</a>.
 </p>
 
-<pre><code>
-{`<script context="module">
-	import { dev } from '$app/env';
-	export const hydrate = dev;
-	export const router = dev;
-</script>`}
-</code></pre>
+<pre><code>{code}</code></pre>
