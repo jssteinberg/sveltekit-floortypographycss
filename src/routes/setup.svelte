@@ -22,7 +22,7 @@ Second, add Postcss and Floor typography CSS (the latter requires postcss-import
 
 <pre><code>
 npx svelte-add@latest postcss
-npm i -D floor-typography-css@next postcss-import
+npm i -D floor-typography-css postcss-import
 </code></pre>
 
 <p>Add what else you want from <a href="https://github.com/svelte-add/svelte-add">svelte-add</a>.</p>

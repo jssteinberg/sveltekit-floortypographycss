@@ -64,7 +64,11 @@
 
 	{#if current && menu[current.index + 1]}
 		<p>
-		<a sveltekit:prefetch class="button" href="{menu[current.index + 1].href}">Next: {menu[current.index + 1].label} &rarr;</a>
+		<a
+			sveltekit:prefetch class="button" href="{menu[current.index + 1].href}"
+			>
+			Next: {menu[current.index + 1].label} &rarr;
+		</a>
 		</p>
 	{/if}
 </main>
