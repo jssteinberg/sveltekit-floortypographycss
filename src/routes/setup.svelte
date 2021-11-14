@@ -31,7 +31,7 @@ npm i -D floor-typography-css postcss-import
 <li>
 <h2>src/app.postcss</h2>
 
-<p>Third, setup Floor Typography CSS in src/app.postcss—your global (Postcss) stylesheet:</p>
+<p>Third, setup Floor Typography CSS in "src/app.css"—your global (Postcss) stylesheet:</p>
 
 <pre><code>
 {`@import 'floor-typography-css/src/reset.css'; /* Core */
