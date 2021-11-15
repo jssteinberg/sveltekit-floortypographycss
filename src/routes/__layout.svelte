@@ -38,10 +38,8 @@
 </svelte:head>
 
 <header>
-	<p class="site-title h1">
-		<em>
+	<p class="site-title h2">
 		<a sveltekit:prefetch href="/">{title}</a>
-		</em>
 	</p>
 
 	<nav>
@@ -74,8 +72,7 @@
 </main>
 
 <style>
-	/* <em> inside some headings is only normal font-weight */
-	h1 em, .h1 em {
+	h1 em, .site-title {
 		font-style: normal;
 		font-weight: normal;
 	}

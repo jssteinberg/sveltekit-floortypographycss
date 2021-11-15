@@ -9,12 +9,7 @@
 	--rlh: calc(1rem * (1 + var(--added-lead))); /* Root line-height */
 	--spacer: var(--rlh, 1rem); /* Adjusts vertical rhythm */
 	--border-radius: calc(.125 * var(--spacer, 1rem));
-
-	/* Headings */
 	--h1-added-lead: .15; /* Adjusts h1's line-height, thus its font-size */
-	--h2-added-lead: .15;
-	--h3-added-lead: .4;
-	--h4-added-lead: .4;
 
 	/* Font-families */
 	--system-font: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
@@ -32,6 +27,12 @@
 	--visited: purple;
 }
 
+@media (min-width: 600px) {
+	:root {
+		--h1-min-font-size: 2em; /* Bigger h1. Var should be a natural number. */
+	}
+}
+
 @media (prefers-color-scheme: dark) {
 	:root {
 		/* Dark var changes */
@@ -45,7 +46,7 @@
 
 :root {
 	font-family: var(--system-font);
-	font-size: 1.25rem; /* Equals 20px with browser default font-size 16px */
+	font-size: 1.225rem; /* Equals 20px with browser default font-size 16px */
 	background: hsl(var(--bg-h),0%,var(--bg-l));
 }
 
@@ -63,7 +64,14 @@ body {
 }
 
 /* Headings */
-main { --h1-min-font-size: 2em; /* Bigger h1. Var should be a natural number. */ }
+
+main {
+	/* Headings */
+	--h2-added-lead: .15;
+	--h3-added-lead: .4;
+	--h4-added-lead: .4;
+}
+
 h1 { hyphens: manual; /* By default hyphens is set to auto, but h1 should be manual. */ }
 h5, .h5 { font-weight: bold; }
 h6, .h6 { font-style: italic; }
