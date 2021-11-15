@@ -52,9 +52,7 @@
 <main class="prose">
 	<h1>
 		{#if current && current.label}
-			{current.label}{#if current.subtitle}:<br aria-hidden="true" /><em
-					class="subtitle">{current.subtitle}</em
-				>{/if}
+			{current.label}{#if current.subtitle}:<br aria-hidden="true" /><em class="subtitle">{current.subtitle}</em>{/if}
 		{:else}
 			…
 		{/if}
